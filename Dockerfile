@@ -1,13 +1,19 @@
-FROM golang:1-alpine as build
+FROM golang:1.17.6-alpine as build
+
+RUN mkdir /build
+ADD go.mod go.sum hello.go /build/
+
+WORKDIR /build
+RUN go build
+
+FROM alpine:3.14
+
+RUN adduser -S -D -H -h /app appuser
+USER appuser
+COPY --from=build /build/hello-go /app/
+COPY views/ /app/views
 
 WORKDIR /app
-COPY cmd cmd
 
-RUN go build cmd/hello/hello.go
-
-FROM alpine:latest
-WORKDIR /app
-COPY --from=build /app/hello /app/hello
-
-EXPOSE 8180
-ENTRYPOINT ["./hello"]
+EXPOSE 8181
+ENTRYPOINT ["./hello-go"]

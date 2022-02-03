@@ -111,14 +111,6 @@ a:hover, a:focus {
 	flex-direction: column;
 }
 
-@media (max-width: 600px) {
-	.column-section-main {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		flex-direction: column;
-	}
-}
-
 .section-bio {
 	-webkit-box-pack: justify;
 	justify-content: space-between;

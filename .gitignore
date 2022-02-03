@@ -1,2 +1,4 @@
 .history
 .DS_Store
+# DO not add the binary
+hello-go
