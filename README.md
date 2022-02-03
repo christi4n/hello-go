@@ -51,3 +51,11 @@ Check deployment
 
     NAME       READY   UP-TO-DATE   AVAILABLE   AGE
     hello-go   1/1     1            1           22m
+
+Create a service:
+
+    kubectl expose deployment hello-go --type=LoadBalancer --port=8181 --namespace=sample-go-apps
+
+Check the service:
+
+kubectl describe service hello-go --namespace=sample-go-apps
