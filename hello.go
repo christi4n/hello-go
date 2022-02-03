@@ -1,6 +1,9 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/contrib/static"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
 	// Create a router object
@@ -21,6 +24,9 @@ func main() {
 			"message": "pong",
 		})
 	})
+
+	// Add static view support (some directory are required)
+	r.Use(static.Serve("/", static.LocalFile("./views", true)))
 
 	// Listen on port 3000
 	r.Run(":8181")

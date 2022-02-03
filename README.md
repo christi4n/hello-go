@@ -1,8 +1,12 @@
 # Basic GoLang server
 
-## Plain HTML response
+## Plain HTML response (with already defined route)
 
     http://localhost:8181/hello
+
+## Plain HTML with template
+
+    http://localhost:8181/
 
 ## JSON response
 
