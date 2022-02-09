@@ -37,7 +37,7 @@ Create a new namespace:
 
     kubectl create ns sample-go-apps
 
-Then, create deployment
+Then, create the deployment
 
 You have two choices:
 
@@ -66,3 +66,10 @@ Create a service:
 Check the service:
 
 kubectl describe service hello-go --namespace=sample-go-apps
+
+## Snyk analysis for vulnerabilities
+
+    snyk auth
+    snyk container test chrisnt5/hello-go:1.0.1 --file-Dockerfile
+
+![Snyk analysis](https://raw.githubusercontent.com/christi4n/hello-go/master/assets/snyk-analysis.png)
