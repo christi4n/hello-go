@@ -39,6 +39,13 @@ Create a new namespace:
 
 Then, create deployment
 
+You have two choices:
+
+- declarative - use files in the k8s directory with the **kubectl apply -f** command
+- imperative - see below for both deployment and service
+
+### Imperative method
+
     kubectl create deployment hello-go --image=chrisnt5/hello-go --namespace=sample-go-apps --image-pull-policy=IfNotPresent
 
 Check errors if necessary
