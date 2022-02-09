@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-go
+  name: hello-go
+  namespace: sample-go-apps
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-go
+  template:
+    metadata:
+      labels:
+        app: hello-go
+    spec:
+      containers:
+      - name: hello-go
+        image: chrisnt5/hello-go:1.0.1
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            #memory: "1.5Gi"
+            memory: "256Mi"
+            #cpu: "1" - 500m is half a cpu
+            cpu: "500m"
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+      restartPolicy: Always
