@@ -66,7 +66,6 @@ Create a service:
 Check the service:
 
 kubectl describe service hello-go --namespace=sample-go-apps
-
 ## Snyk analysis for vulnerabilities
 
     snyk auth
