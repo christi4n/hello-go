@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hello-go
-        image: chrisnt5/hello-go:1.0.1
+        image: chrisnt5/hello-go:1.0.2
         imagePullPolicy: IfNotPresent
         resources:
           limits:
