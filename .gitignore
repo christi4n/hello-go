@@ -1,4 +1,5 @@
 .history
 .DS_Store
-# DO not add the binary
+# Do not add the binary
 hello-go
+*.code-workspace
