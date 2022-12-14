@@ -1,0 +1,9 @@
+gitops:
+  manifest_projects:
+    - id: christi4n/hello-go
+      default_namespace: default
+    - glob: 'manifests/*.{yaml,yml,json}'
+
+ci_access:
+  groups:
+    - id: christi4n/hello-go
