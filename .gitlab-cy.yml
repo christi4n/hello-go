@@ -1,8 +1,0 @@
-stages:
-  - test
-
-test-code-job2:
-  stage: test
-  script:
-    - echo "If the files are built successfully, test other files with a different command:"
-    - rake test2
