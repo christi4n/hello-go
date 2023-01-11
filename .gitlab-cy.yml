@@ -1,18 +1,8 @@
-# stages:
-#   - build
-#   - deploy
+stages:
+  - test
 
-# build-image:
-#   stage: build
-
-deploy:
-  image:
-    name: bitnami/kubectl:latest
-    entrypoint: ['']
-  before_script:
-    # Use the K8s Kubeconfig file from the Project/Settings/CICD/Variables section
-    - export KUBECONFIG=$KUBECONFIG_FILE
+test-code-job2:
+  stage: test
   script:
-    - kubectl config get-contexts
-    - kubectl config use-context basic-dev-cluster:gitlab-agent-agent-hello-go
-    - kubectl get pods
+    - echo "If the files are built successfully, test other files with a different command:"
+    - rake test2
