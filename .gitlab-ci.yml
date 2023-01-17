@@ -4,10 +4,11 @@ stages:
 
 lint-tests:
   stage: tests
-  image:
-    name: docker.io/chrisnt5/kubevious-cli:1.0.0
+  image: docker
+  services: 
+    - docker:dind
   script:
-    - kubevious guard k8s --detailed --ignore-unknown --ignore-patterns
+    - docker run docker.io/chrisnt5/kubevious-cli:1.0.0 "kubevious guard k8s --detailed --ignore-unknown --ignore-patterns"
 
 # build-image:
 #   stage: build
