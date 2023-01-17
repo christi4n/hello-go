@@ -12,7 +12,7 @@ gitops:
       path:
       # Paths inside of the repository to scan for manifest files.
       # Directories with names starting with a dot are ignored.
-      - glob: 'manifests/*.{yaml,yml,json}'
+      - glob: 'manifests/*.{yaml,yml,yaml,json}'
       # Reconcile timeout defines whether the applier should wait
       # until all applied resources have been reconciled, and if so,
       # how long to wait.
