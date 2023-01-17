@@ -14,5 +14,5 @@ deploy:
   #   - export KUBECONFIG=$KUBECONFIG_FILE
   script:
     - kubectl config get-contexts
-    - kubectl config use-context basic-dev-cluster:agent-hello-go 
+    - kubectl config use-context christi4n/hello-go:agent-hello-go 
     - kubectl get pods
