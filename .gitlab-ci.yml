@@ -16,5 +16,5 @@ deploy-app:
     - kubectl config get-contexts
     - kubectl config use-context christi4n/hello-go:agent-hello-go 
     - kubectl create namespace $APP_NAMESPACE --dry-run=client -o yaml | kubectl apply -f -
-    - kubectl apply -f ./k8s/deployment.yaml
-    - kubectl apply -f ./k8s/service.yaml
+    - kubectl apply -f k8s/deployment.yaml
+    - kubectl apply -f k8s/service.yaml
