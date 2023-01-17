@@ -9,9 +9,9 @@ deploy:
   image:
     name: bitnami/kubectl:latest
     entrypoint: ['']
-  before_script:
-    # Use the K8s Kubeconfig file from the Project/Settings/CICD/Variables section
-    - export KUBECONFIG=$KUBECONFIG_FILE
+  # before_script:
+  #   # Use the K8s Kubeconfig file from the Project/Settings/CICD/Variables section
+  #   - export KUBECONFIG=$KUBECONFIG_FILE
   script:
     - kubectl config get-contexts
     - kubectl config use-context basic-dev-cluster:agent-hello-go 
