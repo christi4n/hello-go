@@ -72,3 +72,6 @@ kubectl describe service hello-go --namespace=sample-go-apps
     snyk container test chrisnt5/hello-go:1.0.1 --file-Dockerfile
 
 ![Snyk analysis](https://raw.githubusercontent.com/christi4n/hello-go/master/assets/snyk-analysis.png)
+
+Agent Access Token : 1D_RqvotYcJhD9szZLPztmjjsNvvvEkMADSnDMg9-zFy32fB3w
+
