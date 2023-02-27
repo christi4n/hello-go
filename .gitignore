@@ -3,3 +3,6 @@
 # Do not add the binary
 hello-go
 *.code-workspace
+
+# Personal files
+scripts

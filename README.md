@@ -73,5 +73,16 @@ kubectl describe service hello-go --namespace=sample-go-apps
 
 ![Snyk analysis](https://raw.githubusercontent.com/christi4n/hello-go/master/assets/snyk-analysis.png)
 
-Agent Access Token : 1D_RqvotYcJhD9szZLPztmjjsNvvvEkMADSnDMg9-zFy32fB3w
+## Scan with Kubevious CLI
 
+### Kubevious image
+
+Use the image chrisnt5/kubevious-cli:1.x.x store in Docker hub.
+
+### Command
+
+You can use the following command:
+
+```
+   docker run -v $(pwd)/k8s:/src chrisnt5/kubevious-cli:1.0.0 "kubevious guard src --detailed --ignore-unknown"
+```
